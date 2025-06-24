@@ -1,6 +1,9 @@
 import {Link, useLocation} from 'react-router-dom'
 
 export default function Navbar(){
+
+    const location = useLocation()
+
     return(
         <>
             <nav className="navbar navbar-expand-lg bg-white">
@@ -12,13 +15,13 @@ export default function Navbar(){
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                                <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about">About</Link>
+                                <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/the-house">The house</Link>
+                                <Link className={`nav-link ${location.pathname === '/the-house' ? 'active' : ''}`} to="/the-house">The house</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/culture">Culture</Link>
