@@ -18,18 +18,18 @@ export default function Navbar(){
                                 <Link className="nav-link" to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" href="#">The house</Link>
+                                <Link className="nav-link" to="/the-house">The house</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" href="#">Culture</Link>
+                                <Link className="nav-link" to="/culture">Culture</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" href="#">Philosophy</Link>
+                                <Link className="nav-link" to="/philosophy">Philosophy</Link>
                             </li>
                         </ul>
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link" href="#">Sign In</Link>
+                                <Link className="nav-link" to="/login">Sign In</Link>
                             </li>
                         </ul>
 
