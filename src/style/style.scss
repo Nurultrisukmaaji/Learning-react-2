@@ -31,3 +31,15 @@ body {
         }
     }
 }
+
+.box {
+    width: 100px;
+    height: 50px;
+    background-color: #cf9700;
+    transition: 0.5s;
+}
+
+.box-active {
+    width: 150px;
+    transition: 0.5s;
+}
