@@ -3,6 +3,31 @@
     padding: 0;
 }
 
-.first-header {
-    color: blue;
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                font-weight: 400;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+                &:hover {
+                    font-weight: 600;
+                    color: #cf9700;
+                }
+            }
+        }
+        .active {
+            color: #cf9700 !important;
+            font-weight: 600 !important;
+        }
+    }
 }
