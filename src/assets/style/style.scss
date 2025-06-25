@@ -7,9 +7,20 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+button {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
 .navbar {
     .navbar-toggler:focus {
         box-shadow: none !important;
+    }
+    .navbar-brand {
+        font-weight: 900;
+        color: #2a3247;
     }
     .navbar-nav {
         .nav-item {
@@ -54,6 +65,12 @@ header {
         background-repeat: no-repeat;
         .text-banner-wrap {
             padding: 40px 60px;
+            h1 {
+                font-weight: 800;
+                font-size: 56px;
+                // color: #303030;
+                color: #2a3247;
+            }
         }
     }
 }
