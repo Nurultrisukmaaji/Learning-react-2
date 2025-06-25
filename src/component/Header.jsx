@@ -47,13 +47,13 @@ export default function Header() {
 
     return(
         <>
-            <header>
+            <div className="header">
                 <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <CarouselIndikator indikatorCarousel={imagesBanner}/>
                     </div>
                     <div className="carousel-inner">
-                       <ContentHeader slideImage={imagesBanner} />
+                        <ContentHeader slideImage={imagesBanner} />
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -64,7 +64,7 @@ export default function Header() {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
-            </header>
+            </div>
         </>
     )
 }
