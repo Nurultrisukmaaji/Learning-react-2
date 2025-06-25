@@ -1,19 +1,42 @@
 import { useState } from "react"
 import banner1 from '../assets/images/banner1.jpg'
 import banner2 from '../assets/images/banner2.jpg'
+import banner3 from '../assets/images/banner3.jpg'
 
 export default function Header() {
 
+    const imagesBanner = [banner1, banner2, banner3];
 
-    function ContentHeader() {
-        return(
-            <div className="header-wrap-content d-flex flex-column" style={{ backgroundImage: `url(${banner1})`}}>
-                <div className="container mt-auto mb-auto">
-                    <div className="text-banner-wrap">
-                        <h1>Enjoy The Coffee</h1>
-                    </div>
-                </div>
-            </div>
+    function ContentHeader({imagesBanner}) {
+        return (
+            <>
+                {imagesBanner.map((img, i) => (
+                    <div className={`carousel-item ${i === 0 ? 'active' : ''}`} key={i}>
+                        <div className="header-wrap-content d-flex flex-column"  style={{ backgroundImage: `url(${img})`}}>
+                            <div className="container mt-auto mb-auto">
+                                <div className="text-banner-wrap">
+                                    <h1>Enjoy The Coffee</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                ))}
+            </>
+        )
+    }
+
+    function CarouselIndikator({imagesBanner}){
+        return (
+            <>
+                {imagesBanner.map((_, index) => (
+                    <button type="button" key={index}
+                        data-bs-target="#carouselExampleIndicators" 
+                        data-bs-slide-to={index} className={index === 0 ? 'active' : ''} 
+                        aria-current={index === 0 ? 'true' : 'undefined'} 
+                        aria-label={`Slide ${index + 1}`}>
+                    </button>
+                ))}
+            </>
         )
     }
 
@@ -22,16 +45,10 @@ export default function Header() {
             <header>
                 <div id="carouselExampleIndicators" className="carousel slide">
                     <div className="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <CarouselIndikator imagesBanner={imagesBanner}/>
                     </div>
                     <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <ContentHeader />
-                        </div>
-                        <div className="carousel-item">
-                            <ContentHeader />
-                        </div>
+                       <ContentHeader imagesBanner={imagesBanner} />
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
