@@ -1,11 +1,11 @@
 import Header from "../component/Header"
+import Toggle from "../component/toggle"
 
 export default function Home(){
     return(
         <>
-            <div className="container">
-                <Header />
-            </div>    
+            <Header />
+            {/* <Toggle /> */}
         </>
     )
 }

@@ -44,3 +44,16 @@ body {
     width: 150px;
     transition: 0.5s;
 }
+
+header {
+    .header-wrap-content {
+        width: 100%;
+        height: calc(100vh - 55px);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        .text-banner-wrap {
+            padding: 40px 60px;
+        }
+    }
+}
