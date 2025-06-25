@@ -18,7 +18,7 @@ export default function Header() {
             <button onClick={() => toggleClass()} className="btn btn-primary">Change Box</button>
 
             <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className={`mt-5 d-flex ${isHovered ? 'box box-active' : 'box'}`}>
-                <div className="m-auto">{isHovered? 'Hover Box' : 'Box'}</div>
+                <div className="m-auto">{isHovered ? 'Hover Box' : 'Box'}</div>
             </div>
            
         </>
