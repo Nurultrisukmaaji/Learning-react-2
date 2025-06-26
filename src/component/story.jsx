@@ -25,8 +25,8 @@ export default function Story(){
         <>
             <div className="story-wrap-content">
                 <div className="container">
-                    <h2>Our Story</h2>
-                    <div className="row">
+                    <h2 className='title-section'>Our Story</h2>
+                    <div className="row mt-4">
                         <div className="col-sm-12 col-md-12 col-lg-6">
                             <div className="img-story">
                                 <img src={imgStory} alt="img-story" />
