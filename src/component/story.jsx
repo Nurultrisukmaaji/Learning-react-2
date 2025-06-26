@@ -1,4 +1,5 @@
 import imgStory from '../assets/images/story-img.jpg'
+import {ButtonBlue} from './Button'
 
 export default function Story(){
 
@@ -36,6 +37,7 @@ export default function Story(){
                             <div className="d-flex flex-column h-100">
                                 <TextStory />
                                 <div className='mt-auto'>
+                                    <ButtonBlue name="Selengkapnya"/>
                                     <button className='btn btn-detail shadow mt-4'>Selengkapnya <i className="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
