@@ -5,6 +5,7 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    margin-top: 80px;
 }
 
 button {
@@ -15,6 +16,7 @@ button {
 }
 
 .navbar {
+    padding: 20px 0px;
     .navbar-toggler:focus {
         box-shadow: none !important;
     }
@@ -60,7 +62,7 @@ button {
     // margin-bottom: 40px;
     .header-wrap-content {
         width: 100%;
-        height: calc(100vh - 55px);
+        height: calc(100vh - 75px);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -88,12 +90,13 @@ button {
     padding: 30px 0px;
     h2 {
         color: #2a3247;
-        font-size: 48px;
+        font-size: 52px;
         font-weight: 700;
     }
     p {
         text-align: justify;
-        line-height: 30px;
+        line-height: 36px;
+        font-size: 18px;
     }
     .img-story {
         width: 100%;
@@ -103,6 +106,18 @@ button {
             height: 100%;
             object-fit: cover;
             border-radius: 12px;
+        }
+    }
+    .btn-detail {
+        background-color: #2a3247;
+        color: #fff;
+        border-radius: 20px;
+        border: 1px solid #2a3247;
+        padding: 6px 16px;
+        &:hover {
+            background-color: #fff;
+            color: #2a3247;
+            transition: 0.5s;
         }
     }
 }
